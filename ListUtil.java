@@ -5,7 +5,7 @@ public class ListUtil {
 	 * @return
 	 */
 	private <T> List<T> toList(T[] array) {
-		return new ArrayList<T>(Arrays.asList(array));
+		return Stream.of(array).collect(Collectors.toList());
 	}
 
 	/**
