@@ -4,7 +4,7 @@ public class ListUtil {
 	 * @param array
 	 * @return
 	 */
-	private <T> List<T> toList(T[] array) {
+	public static <T> List<T> toList(T[] array) {
 		return Stream.of(array).collect(Collectors.toList());
 	}
 
@@ -13,7 +13,7 @@ public class ListUtil {
 	 * @param list
 	 * @return
 	 */
-	private <T> List<T> pop(List<T> list) {
+	public static <T> List<T> pop(List<T> list) {
 		list.remove(list.size() - 1);
 		return list;
 	}
