@@ -1,4 +1,4 @@
-class ArrayUtil {
+public class ArrayUtil {
   /**
 	 * array に 値が含まれるか検査
 	 * @param list
