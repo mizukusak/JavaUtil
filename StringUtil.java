@@ -1,4 +1,8 @@
 public class StringUtil {
+	public static <T> String join(String delimiter, T[] arr) {
+		return String.join(delimiter, ArrayUtil.toStrList(arr));
+	}
+	
 	/**
 	 * 任意の文字を追加指定可能な trim
 	 * @param val
