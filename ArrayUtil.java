@@ -9,7 +9,7 @@ public class ArrayUtil {
 	}
 
 	/**
-	 * array を List にして返す
+	 * array を List<String> にして返す
 	 * @param array
 	 * @return
 	 */
