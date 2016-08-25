@@ -1,7 +1,7 @@
 
 public class FuncUtil {
 	/**
-	 * Stream 内での例外をラッピング(必ず Stream の外側で catch すること)
+	 * Stream 内での例外をラッピング(必ず Stream の外側で catch すること(e.getCause() で取得))
 	 */
 	public static <T, R> FunctionWrapper<T, R> wrapFunction(FunctionWrapper<T, R> f) {
 		return f;
