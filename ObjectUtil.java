@@ -45,6 +45,11 @@ public class ObjectUtil {
     	return obj;
     }
 
+    /**
+     * 親クラスを再帰的にたどり、定義されている fields を取得
+     * @param clazz
+     * @return
+     */
     private static List<Field> getDeclaredFieldsRecur(Class<?> clazz) {
 		Class<?> current = clazz;
 		List<Field> fields = new ArrayList<>();
