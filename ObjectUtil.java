@@ -28,7 +28,7 @@ public class ObjectUtil {
     		}
     	}
     	else if(obj instanceof Object && isValid) {
-    		Field[] fileds = obj.getClass().getDeclaredFields();
+    		List<Field> fileds = getDeclaredFieldsRecur(obj.getClass());
     		for (Field field : fileds) {
     			field.setAccessible(true);
     			if (Modifier.isFinal(field.getModifiers())) {
@@ -45,5 +45,16 @@ public class ObjectUtil {
     	return obj;
     }
 
+    private static List<Field> getDeclaredFieldsRecur(Class<?> clazz) {
+		Class<?> current = clazz;
+		List<Field> fields = new ArrayList<>();
+		do {
+			Field[] declaredFields = current.getDeclaredFields();
+			for (Field declaredField : declaredFields) {
+				fields.add(declaredField);
+			}
+		} while ((current = current.getSuperclass()) != null);
+		return fields;
+    }
 }
 
