@@ -4,7 +4,7 @@ public class ServletUtil {
 	 * @param multipartFile
 	 * @return
 	 */
-	private File getTempFile(MultipartFile multipartFile) {
+	private static File getTempFile(MultipartFile multipartFile) {
 	    CommonsMultipartFile commonsMultipartFile = (CommonsMultipartFile) multipartFile;
 	    FileItem fileItem = commonsMultipartFile.getFileItem();
 	    DiskFileItem diskFileItem = (DiskFileItem) fileItem;
