@@ -12,7 +12,7 @@ public class ObjectUtil {
     }
 
 	/** {@link ObjectUtil#deepMap(T, Function)} */
-    private static <T extends Object, U> T _deepMap(T obj, Function<Object, Object> func, boolean isValid) 
+    public static <T extends Object, U> T _deepMap(T obj, Function<Object, Object> func, boolean isValid) 
     		throws IllegalArgumentException, IllegalAccessException
     {
     	if (obj instanceof List<?>){
